@@ -6,7 +6,7 @@ import logging
 import unittest
 import os
 from service import app
-from service.models import Account, DataValidationError, db
+from service.models import Account, DataValidationError, db, init_db
 from tests.factories import AccountFactory
 
 DATABASE_URI = os.getenv(
@@ -27,7 +27,7 @@ class TestAccount(unittest.TestCase):
         app.config["DEBUG"] = False
         app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URI
         app.logger.setLevel(logging.CRITICAL)
-        Account.init_db(app)
+        # Account.init_db(app)
 
     @classmethod
     def tearDownClass(cls):
