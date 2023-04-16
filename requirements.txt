@@ -24,6 +24,7 @@ factory-boy==3.2.1
 # Code Coverage
 coverage==7.1.0
 # codecov==2.1.12
+# had to remove codecov due to error
 
 # Utilities
 httpie==3.2.1
